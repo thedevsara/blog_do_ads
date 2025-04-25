@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Source+Code+Pro&display=swap');
+
+:root {
+    --bg-dark: #0d1117;
+    --bg-light: #161b22;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --accent-color: #58a6ff;
+    --border-color: #30363d;
+    --card-bg: #161b22;
+  }
+  
+  body {
+    background: linear-gradient(
+      to bottom right,
+      #12254b 0%,       /* Preto azulado escuro */
+      #2777e6 50%,      /* Tom médio */
+      #000000 100%      /* Cor original do fundo */
+    );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+    
+    color: #c9d1d9;     
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Layout principal */
+  #conteiner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+  }
+  #computer-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;  /* Espaço entre texto e ícone */
+    vertical-align: middle;
+}
+  
+  #leiaute-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  /* Cabeçalho */
+  header {
+    width: 100%;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    display: inline-flex;  /* Layout em linha */
+    align-items: center;  /* Centraliza verticalmente */
+    position: relative;
+  }
+  
+  #titulo-principal {
+    
+    font-family: 'Source Code Pro', monospace;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Navegação */
+  nav {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+  }
+  
+  nav h3 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-bottom: 8px;
+  }
+  aside li a:hover i {
+    color: #d9e0e7; 
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+/* Estilos para a navegação */
+nav li i {
+    width: 18px;
+    text-align: center;
+    margin-right: 8px;
+    color: var(--accent-color);
+    font-size: 0.9em;
+}
+
+nav h3 i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+
+
+nav li a:hover i {
+    color: #eceef0;
+    transform: scale(1.8);
+    transition: all 0.2s ease;
+}
+
+/* Alinhamento dos itens */
+nav ul {
+    padding-left: 5px;
+}
+
+
+nav li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+  
+  /* Conteúdo principal */
+  main {
+    flex: 3;
+    min-width: 300px;
+  }
+  
+  article {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  
+  article h2 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+  }
+  
+  /* Barra lateral */
+  aside {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    align-self: flex-start;
+  }
+  
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Rodapé */
+  footer {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Links */
+  a:link, a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+  
+  /* Tabelas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+  }
+  
+  th, td {
+    padding: 8px 16px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+  }
+  
+  /* Formulários */
+  input, select {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  
+  input[type="submit"] {
+    background-color: #238636;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2ea043;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    #leiaute-flex {
+      flex-direction: column;
+    }
+    
+    nav, main, aside {
+      width: 100%;
+      min-width: auto;
+    }
+    
+    #titulo-principal {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Classes adicionais */
+  .autor-data {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 16px;
+  }
+  
+  .code-block {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    overflow-x: auto;
+  }
+  
+  /* Efeitos de hover */
+  article:hover {
+    border-color: var(--accent-color);
+    transition: border-color 0.2s ease;
+  }
+
+.modern-form {
+    padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group label i {
+  margin-right: 8px;
+  color: var(--accent-color);
+  width: 16px;
+  text-align: center;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.modern-form input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 3px;
+  margin-top: 8px;
+}
+
+.btn-moderno {
+  background: var(--accent-color);
+  color: white;
+  border:#000000;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-moderno:hover {
+  background: #16417c;
+  transform:perspective(1,1);
+}
+.form-footer {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.engine-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input-group:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.2);
+}
+
+.search-icon {
+  padding: 0 12px;
+  color: var(--text-secondary);
+}
+
+.search-button:hover {
+  background: #3a8cff;
+}
+
+@media (max-width: 600px) {
+  .search-options {
+      flex-direction: column;
+      gap: 8px;
+  }
+  
+  .search-input-group {
+      flex-wrap: wrap;
+  }
+  
+  .search-select {
+      width: 100%;
+      margin: 8px 0;
+  }
+}
+
+
+
+/* --- Estilos para Alinhamentos --- */
+.alignment-example {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.alignment-example h3 {
+  margin-top: 0;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alignment-example h3 i {
+  font-size: 1.1rem;
+}
+
+.alignment-example p {
+  background: rgba(88, 166, 255, 0.05);
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.alignment-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Classes de alinhamento */
+.justificado {
+  text-align: justify;
+}
+
+.esquerda {
+  text-align: left;
+}
+
+.centro {
+  text-align: center;
+}
+
+.direita {
+  text-align: right;
+}
+
+/* Espaçamento entre linhas */
+.entre-linhas-1 {
+  line-height: 1.0;
+}
+
+.entre-linhas-1-5 {
+  line-height: 1.5;
+}
+
+.entre-linhas-2 {
+  line-height: 2.0;
+}
+
+/* Espaçamento entre letras */
+.entre-letras-1 {
+  letter-spacing: normal;
+}
+
+.entre-letras-2 {
+  letter-spacing: 0.1em;
+}
+
+.entre-letras-3 {
+  letter-spacing: 0.3em;
+}
+
+.line-spacing-examples p,
+.letter-spacing-examples p {
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(88, 166, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Destaque visual para exemplos */
+.line-spacing-examples,
+.letter-spacing-examples {
+  border-left: 2px solid var(--border-color);
+  padding-left: 15px;
+}
+
+.vermelho{
+  color: red;
+}
+
+.verde{
+  color: green;
+}
+
+.azul{
+  color: blue
+}
+
+.cinza-claro{
+  color: #b2c0cf;
+}
+
+.cinza-escuro{
+  color: rgb(83, 83, 83)
+}
+
+.negrito{
+  font-weight: bold;
+}
+
+.sublinhado{
+  text-decoration: underline;
+}
+
+.italico{
+  font-style: italic;
+}
